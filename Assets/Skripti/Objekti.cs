@@ -11,6 +11,7 @@ public class Objekti : MonoBehaviour {
 	public GameObject e46;
 	public GameObject e61;
 	public GameObject ekskavators;
+	public GameObject policija;
  
 	[HideInInspector]
 	public Vector2 atkrMKoord;
@@ -28,6 +29,8 @@ public class Objekti : MonoBehaviour {
 	public Vector2 e61Koord;
 	[HideInInspector]
 	public Vector2 ekskavatorsKoord;
+	[HideInInspector]
+	public Vector2 policijasKoord;
 
 	public Canvas kanva;
 	 
@@ -59,5 +62,7 @@ public class Objekti : MonoBehaviour {
 		e61Koord = e61.GetComponent<RectTransform>().localPosition;
 
 		ekskavatorsKoord = ekskavators.GetComponent<RectTransform>().localPosition;
+
+		policijasKoord = policija.GetComponent<RectTransform>().localPosition;
     }
 }
