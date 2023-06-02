@@ -73,11 +73,15 @@ public class NomesanasVieta : MonoBehaviour,
 							break;
 
 						case "b2":
-							objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[3]);
+							objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[4]);
 							break;
-		
 
-						default:
+                        case "cements":
+                            objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[5]);
+                            break;
+
+
+                        default:
 							Debug.Log("Tags nav definēts!");
 							break;
 					}
@@ -111,6 +115,10 @@ public class NomesanasVieta : MonoBehaviour,
 					case "b2":
 						objektuSkripts.b2.GetComponent<RectTransform>().localPosition = objektuSkripts.b2Koord;
 						break;
+
+                    case "cements":
+                        objektuSkripts.cements.GetComponent<RectTransform>().localPosition = objektuSkripts.cementsKoord;
+                        break;
 
                     default:
                         Debug.Log("Tags nav definēts!");
