@@ -8,6 +8,7 @@ public class Objekti : MonoBehaviour {
 	public GameObject autobuss;
 	public GameObject b2;
 	public GameObject cements;
+	public GameObject e46;
  
 	[HideInInspector]
 	public Vector2 atkrMKoord;
@@ -19,6 +20,8 @@ public class Objekti : MonoBehaviour {
 	public Vector2 b2Koord;
 	[HideInInspector]
 	public Vector2 cementsKoord;
+	[HideInInspector]
+	public Vector2 e46Koord;
 
 	public Canvas kanva;
 	 
@@ -44,5 +47,7 @@ public class Objekti : MonoBehaviour {
 		b2Koord = b2.GetComponent<RectTransform>().localPosition;
 
 		cementsKoord = cements.GetComponent<RectTransform>().localPosition;
+
+		e46Koord = e46.GetComponent<RectTransform>().localPosition;
     }
 }
