@@ -103,6 +103,7 @@ public class NomesanasVieta : MonoBehaviour,
                         case "traktors2":
                             objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[11]);
                             break;
+
                         case "ugunsdzeseji":
                             objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[11]);
                             break;
@@ -165,6 +166,10 @@ public class NomesanasVieta : MonoBehaviour,
 
                     case "traktors":
                         objektuSkripts.traktors.GetComponent<RectTransform>().localPosition = objektuSkripts.traktorsKoord;
+                        break;
+
+                    case "traktors2":
+                        objektuSkripts.traktors2.GetComponent<RectTransform>().localPosition = objektuSkripts.traktorsKoord2;
                         break;
 
                     case "ugunsdzeseji":
