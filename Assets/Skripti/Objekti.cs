@@ -11,7 +11,7 @@ public class Objekti : MonoBehaviour {
 	public GameObject e46;
 	public GameObject e61;
 	public GameObject ekskavators;
-	public GameObject policija;
+	public GameObject policija;	
 	public GameObject traktors;
 	public GameObject traktors2;
 	public GameObject ugunsdzeseji;
