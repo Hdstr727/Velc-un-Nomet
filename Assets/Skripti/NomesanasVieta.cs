@@ -59,55 +59,54 @@ public class NomesanasVieta : MonoBehaviour,
 					switch (eventData.pointerDrag.tag) {
 						case "atkritumi":
 							objektuSkripts.skanasAvots.PlayOneShot(
-								objektuSkripts.skanasKoAtskanot[1]);
+								objektuSkripts.skanasKoAtskanot[0]);
 							break;
 
 						case "atrie":
 							objektuSkripts.skanasAvots.PlayOneShot(
-								objektuSkripts.skanasKoAtskanot[2]);
+								objektuSkripts.skanasKoAtskanot[1]);
 							break;
 
 						case "buss":
 							objektuSkripts.skanasAvots.PlayOneShot(
-								objektuSkripts.skanasKoAtskanot[3]);
+								objektuSkripts.skanasKoAtskanot[2]);
 							break;
 
 						case "b2":
-							objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[4]);
+							objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[3]);
 							break;
 
                         case "cements":
-                            objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[5]);
+                            objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[4]);
                             break;
 
                         case "e46":
-                            objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[6]);
+                            objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[5]);
                             break;
 
                         case "e61":
-                            objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[7]);
+                            objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[6]);
                             break;
 
                         case "ekskavators":
-                            objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[8]);
+                            objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[7]);
                             break;
 
                         case "policija":
-                            objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[9]);
+                            objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[8]);
                             break;
 
                         case "traktors":
-                            objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[10]);
+                            objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[9]);
                             break;
 
                         case "traktors2":
-                            objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[11]);
+                            objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[10]);
                             break;
 
                         case "ugunsdzeseji":
                             objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[11]);
                             break;
-
 
                         default:
 							Debug.Log("Tags nav definēts!");
@@ -133,7 +132,7 @@ public class NomesanasVieta : MonoBehaviour,
                         GetComponent<RectTransform>().localPosition =
                         objektuSkripts.atrPKoord;
                         break;
-
+                        
                     case "buss":
                         objektuSkripts.autobuss.
                          GetComponent<RectTransform>().localPosition =
