@@ -1,5 +1,5 @@
-# DragNDrop_2PT_1
-Projekts "Drag N Drop", realizē automašīnu novietošanas spēli. Spēle paredzēta mazāko klašu skolēniem.
+# Velc-un-Nomet
+Projekts "Velc-un-Nomet", realizē automašīnu novietošanas spēli. Spēle paredzēta mazāko klašu skolēniem.
 
 ## Darāmo darbu saraksts
 - [x] Iespēja pārvietot automašīnu objektus
