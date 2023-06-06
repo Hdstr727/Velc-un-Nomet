@@ -53,14 +53,11 @@ public class Objekti : MonoBehaviour {
 
 
 	void Start() {
-		atkrMKoord =
-        atkritumuMasina.GetComponent<RectTransform>().localPosition;
+		atkrMKoord = atkritumuMasina.GetComponent<RectTransform>().localPosition;
         
-		atrPKoord =
-        atraPalidziba.GetComponent<RectTransform>().localPosition;
+		atrPKoord = atraPalidziba.GetComponent<RectTransform>().localPosition;
 
-        bussKoord =
-		autobuss.GetComponent<RectTransform>().localPosition;
+        bussKoord = autobuss.GetComponent<RectTransform>().localPosition;
 
 		b2Koord = b2.GetComponent<RectTransform>().localPosition;
 
@@ -79,6 +76,5 @@ public class Objekti : MonoBehaviour {
         traktorsKoord2 = traktors2.GetComponent<RectTransform>().localPosition;
 
 		ugunsdzesejiKoord = ugunsdzeseji.GetComponent<RectTransform>().localPosition;
-
     }
 }
