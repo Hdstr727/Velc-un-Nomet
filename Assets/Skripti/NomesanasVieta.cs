@@ -14,6 +14,11 @@ public class NomesanasVieta : MonoBehaviour,
     //Šo mainigo inkrementē katru reizi, kad mašina pielimējas pie savas vietas
     private static int masinasPareizaVieta = 0;
 
+    public static void SetMasinasPareizaVieta(int newValue)
+    {
+        masinasPareizaVieta = newValue;
+    }
+
     public void OnDrop(PointerEventData eventData)
     {
         if (eventData.pointerDrag != null)

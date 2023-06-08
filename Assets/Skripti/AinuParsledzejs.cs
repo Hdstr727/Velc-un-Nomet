@@ -8,7 +8,18 @@ public class AinuParsledzejs : MonoBehaviour {
 	public void Sakt()
 	{
 		SceneManager.LoadScene("PilsetasKarte");
-	}
+        NomesanasVieta nomesanasVieta = FindObjectOfType<NomesanasVieta>();
+
+        if (nomesanasVieta != null)
+        {
+
+            NomesanasVieta.SetMasinasPareizaVieta(0);
+        }
+        else
+        {
+            Debug.LogError("UzvarasAttelosana component not found!");
+        }
+    }
 
 	public void Atpakaļ()
 	{
@@ -19,5 +30,5 @@ public class AinuParsledzejs : MonoBehaviour {
 	{
 		Application.Quit();
 	}
-	
+
 }
