@@ -9,6 +9,9 @@ public class NomesanasVieta : MonoBehaviour,
 	private Vector2 vietasIzm, velkObjIzm;
 	private float xIzmStarpiba, yIzmStarpiba;
 	public Objekti objektuSkripts;
+    //Definets mainigais lai parbaudit kad visas 12 mašinas ir savā vieta
+    //Šo mainigo inkrementē katru reizi, kad mašina pielimējas pie savas vietas
+    private static int masinasPareizaVieta = 0;
 
     public void OnDrop(PointerEventData eventData)
     {
@@ -59,60 +62,89 @@ public class NomesanasVieta : MonoBehaviour,
 					switch (eventData.pointerDrag.tag) {
 						case "atkritumi":
 							objektuSkripts.skanasAvots.PlayOneShot(
-								objektuSkripts.skanasKoAtskanot[0]);
-							break;
+								objektuSkripts.skanasKoAtskanot[1]);
+                            masinasPareizaVieta++;
+                            Debug.Log("Mašinas pareiza vieta: " + masinasPareizaVieta);
+                            break;
 
 						case "atrie":
 							objektuSkripts.skanasAvots.PlayOneShot(
-								objektuSkripts.skanasKoAtskanot[1]);
-							break;
+								objektuSkripts.skanasKoAtskanot[2]);
+                            masinasPareizaVieta++;
+                            Debug.Log("Mašinas pareiza vieta: " + masinasPareizaVieta);
+                            break;
 
 						case "buss":
 							objektuSkripts.skanasAvots.PlayOneShot(
-								objektuSkripts.skanasKoAtskanot[2]);
-							break;
+								objektuSkripts.skanasKoAtskanot[3]);
+                            masinasPareizaVieta++;
+                            Debug.Log("Mašinas pareiza vieta: " + masinasPareizaVieta);
+                            break;
 
 						case "b2":
-							objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[3]);
-							break;
+							objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[4]);
+                            masinasPareizaVieta++;
+                            Debug.Log("Mašinas pareiza vieta: " + masinasPareizaVieta);
+                            break;
 
                         case "cements":
-                            objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[4]);
+                            objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[5]);
+                            masinasPareizaVieta++;
+                            Debug.Log("Mašinas pareiza vieta: " + masinasPareizaVieta);
                             break;
 
                         case "e46":
-                            objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[5]);
+                            objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[6]);
+                            masinasPareizaVieta++;
+                            Debug.Log("Mašinas pareiza vieta: " + masinasPareizaVieta);
                             break;
 
                         case "e61":
-                            objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[6]);
+                            objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[7]);
+                            masinasPareizaVieta++;
+                            Debug.Log("Mašinas pareiza vieta: " + masinasPareizaVieta);
                             break;
 
                         case "ekskavators":
-                            objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[7]);
+                            objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[8]);
+                            masinasPareizaVieta++;
+                            Debug.Log("Mašinas pareiza vieta: " + masinasPareizaVieta);
                             break;
 
                         case "policija":
-                            objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[8]);
+                            objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[9]);
+                            masinasPareizaVieta++;
+                            Debug.Log("Mašinas pareiza vieta: " + masinasPareizaVieta);
                             break;
 
                         case "traktors":
-                            objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[9]);
+                            objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[10]);
+                            masinasPareizaVieta++;
+                            Debug.Log("Mašinas pareiza vieta: " + masinasPareizaVieta);
                             break;
 
                         case "traktors2":
-                            objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[10]);
+                            objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[11]);
+                            masinasPareizaVieta++;
+                            Debug.Log("Mašinas pareiza vieta: " + masinasPareizaVieta);
                             break;
 
                         case "ugunsdzeseji":
-                            objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[11]);
+                            objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[12]);
+                            masinasPareizaVieta++;
+                            Debug.Log("Mašinas pareiza vieta: "+masinasPareizaVieta);
                             break;
 
                         default:
 							Debug.Log("Tags nav definēts!");
 							break;
 					}
-				}
+                    //Parbauda vai ir sasniegta uzvara
+                    if (masinasPareizaVieta == 12)
+                    {
+                        Debug.Log("Uzvara!");
+                    }
+                }
 
 				//Ja tagi nesakrīt, tātad nepareizajā vietā
 			} else	{
@@ -183,4 +215,5 @@ public class NomesanasVieta : MonoBehaviour,
 		}
 		
 	}
+
 }
